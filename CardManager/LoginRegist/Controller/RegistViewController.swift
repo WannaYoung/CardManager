@@ -12,6 +12,7 @@ class RegistViewController: UIViewController
 {
     
     @IBOutlet weak var emailTF: UITextField!
+    @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     
 
@@ -32,34 +33,48 @@ class RegistViewController: UIViewController
     
     @IBAction func clickRegist(sender: UIButton)
     {
-        if (!emailTF.text!.isEmpty && !passwordTF.text!.isEmpty)
+        AppTools.showHudWithText("")
+        
+        if (!nameTF.text!.isEmpty && !passwordTF.text!.isEmpty)
         {
             let newUser:AVUser = AVUser()
-            newUser.username = emailTF.text
+            newUser.email = emailTF.text
+            newUser.username = nameTF.text
             newUser.password = passwordTF.text
             
             newUser.signUpInBackgroundWithBlock(
                 { (succeeded:Bool, error:NSError!) -> Void in
                 
-                AVUser .logInWithUsernameInBackground(newUser.username, password: newUser.password, block:
-                    { (user:AVUser!, error:NSError!) -> Void in
-                    self.dismissViewControllerAnimated(true, completion:
-                        { () -> Void in
+                    if(succeeded)
+                    {
+                        AVUser.logInWithUsernameInBackground(newUser.username, password: newUser.password, block:
+                            { (user:AVUser!, error:NSError!) -> Void in
+                                
+                                if(user == nil)
+                                {
+                                    AppTools.showHudFor1Point8(String(error.userInfo["NSLocalizedDescription"]))
+                                    
+                                }
+                                else
+                                {
+                                    self.dismissViewControllerAnimated(true)
+                                        { () -> Void in
+                                            AppTools.showHudFor1Point8("注册成功")
+                                    }
+                                    
+                                }
+                                
+                                
+                        })
                         
-                    })
-                })
+                    }
+                    else
+                    {
+                        AppTools.showHudFor1Point8(String(error.userInfo["NSLocalizedDescription"]))
+                    }
             })
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }

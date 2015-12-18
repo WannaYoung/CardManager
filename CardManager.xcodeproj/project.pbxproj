@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F9086D91C23DFA900ED433A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9086D61C23DFA900ED433A /* MBProgressHUD.m */; };
+		2F9086DA1C23DFA900ED433A /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9086D81C23DFA900ED433A /* MMMaterialDesignSpinner.m */; };
+		2F9086DC1C23E0F800ED433A /* AppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9086DB1C23E0F800ED433A /* AppTools.swift */; };
 		2F9CF6431C20F6E5009F7739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9CF6421C20F6E5009F7739 /* AppDelegate.swift */; };
 		2F9CF6481C20F6E5009F7739 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F9CF6461C20F6E5009F7739 /* Main.storyboard */; };
 		2F9CF64A1C20F6E5009F7739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F9CF6491C20F6E5009F7739 /* Assets.xcassets */; };
@@ -53,6 +56,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F9086D51C23DFA900ED433A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		2F9086D61C23DFA900ED433A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		2F9086D71C23DFA900ED433A /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
+		2F9086D81C23DFA900ED433A /* MMMaterialDesignSpinner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMMaterialDesignSpinner.m; sourceTree = "<group>"; };
+		2F9086DB1C23E0F800ED433A /* AppTools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTools.swift; sourceTree = "<group>"; };
 		2F9CF63F1C20F6E5009F7739 /* CardManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F9CF6421C20F6E5009F7739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F9CF6471C20F6E5009F7739 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -130,6 +138,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F9086D41C23DFA900ED433A /* MBProgressBlur */ = {
+			isa = PBXGroup;
+			children = (
+				2F9086D51C23DFA900ED433A /* MBProgressHUD.h */,
+				2F9086D61C23DFA900ED433A /* MBProgressHUD.m */,
+				2F9086D71C23DFA900ED433A /* MMMaterialDesignSpinner.h */,
+				2F9086D81C23DFA900ED433A /* MMMaterialDesignSpinner.m */,
+			);
+			path = MBProgressBlur;
+			sourceTree = "<group>";
+		};
 		2F9CF6361C20F6E4009F7739 = {
 			isa = PBXGroup;
 			children = (
@@ -222,6 +241,7 @@
 		2F9CF6851C20FBF9009F7739 /* Statement */ = {
 			isa = PBXGroup;
 			children = (
+				2F9086DB1C23E0F800ED433A /* AppTools.swift */,
 				2F9CF6871C20FC37009F7739 /* CommonConst.swift */,
 			);
 			path = Statement;
@@ -354,16 +374,9 @@
 		2FEBF2771C215543001DB9A0 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
-				2FEBF27B1C21556A001DB9A0 /* MBProgressHUD */,
+				2F9086D41C23DFA900ED433A /* MBProgressBlur */,
 			);
 			path = ThirdParty;
-			sourceTree = "<group>";
-		};
-		2FEBF27B1C21556A001DB9A0 /* MBProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,7 +463,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = 2F9CF6361C20F6E4009F7739;
@@ -498,6 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FEBF2741C213D6B001DB9A0 /* LoginViewController.swift in Sources */,
+				2F9086DC1C23E0F800ED433A /* AppTools.swift in Sources */,
 				2FEBF2531C2110D9001DB9A0 /* NSString+Tony.m in Sources */,
 				2FEBF2591C2110D9001DB9A0 /* UIImage+Scale.m in Sources */,
 				2FEBF25B1C2110D9001DB9A0 /* UIView+Shake.m in Sources */,
@@ -509,9 +522,11 @@
 				2FEBF2561C2110D9001DB9A0 /* UIBarButtonItem+Badge.m in Sources */,
 				2FEBF2581C2110D9001DB9A0 /* UIImage+Extensions.m in Sources */,
 				2F9CF6881C20FC37009F7739 /* CommonConst.swift in Sources */,
+				2F9086DA1C23DFA900ED433A /* MMMaterialDesignSpinner.m in Sources */,
 				2F9CF6431C20F6E5009F7739 /* AppDelegate.swift in Sources */,
 				2FEBF25A1C2110D9001DB9A0 /* UIImageView+LBBlurredImage.m in Sources */,
 				2FEBF2541C2110D9001DB9A0 /* NSTimer+Addition.m in Sources */,
+				2F9086D91C23DFA900ED433A /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

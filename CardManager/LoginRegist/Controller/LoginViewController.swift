@@ -8,7 +8,12 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController
+{
+    
+    @IBOutlet weak var nameTF: UITextField!
+    
+    @IBOutlet weak var passwordTF: UITextField!
 
     override func viewDidLoad()
     {
@@ -33,12 +38,35 @@ class LoginViewController: UIViewController {
     }
     
     
+    @IBAction func clickLogin(sender: UIButton)
+    {
+        AppTools.showHudWithText("")
+        
+        AVUser.logInWithUsernameInBackground(nameTF.text, password: passwordTF.text) { (newUser:AVUser!, error:NSError!) -> Void in
+            
+            if(newUser == nil)
+            {
+                AppTools.showHudFor1Point8(String(error.userInfo["NSLocalizedDescription"]))
+                
+            }
+            else
+            {
+                self.dismissViewControllerAnimated(true)
+                    { () -> Void in
+                        AppTools.showHudFor1Point8("登录成功")
+                }
+                
+            }
+        }
+    }
+    
+    
     @IBAction func closeLogin(sender: UIButton)
     {
-        self.dismissViewControllerAnimated(true)
-        { () -> Void in
+        self.dismissViewControllerAnimated(true) { () -> Void in
             
         }
+     
     }
     
     

@@ -54,6 +54,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USC-RI-Lpp">
                                 <rect key="frame" x="85" y="203" width="30" height="30"/>
                                 <state key="normal" title="登录"/>
+                                <connections>
+                                    <action selector="clickLogin:" destination="Xmm-Kh-81s" eventType="touchUpInside" id="ecc-r2-nj3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r79-3o-5JS">
                                 <rect key="frame" x="262" y="203" width="30" height="30"/>
@@ -66,6 +69,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="7LZ-yM-oRb"/>
+                    <connections>
+                        <outlet property="nameTF" destination="0E5-bQ-Sf8" id="caJ-uR-UfT"/>
+                        <outlet property="passwordTF" destination="ecu-VP-uYm" id="PGk-0i-8iV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ehi-xP-saY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,11 +97,6 @@
                                     <action selector="gotoLogin:" destination="GTK-27-HRY" eventType="touchUpInside" id="THU-an-BND"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54k-4c-qZS">
-                                <rect key="frame" x="52" y="88" width="285" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuL-k4-i3i">
                                 <rect key="frame" x="172" y="214" width="30" height="30"/>
                                 <state key="normal" title="注册"/>
@@ -107,12 +109,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uH1-wO-7T4">
+                                <rect key="frame" x="52" y="110" width="285" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="54k-4c-qZS">
+                                <rect key="frame" x="52" y="66" width="285" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="emailTF" destination="54k-4c-qZS" id="FvF-vn-S44"/>
+                        <outlet property="nameTF" destination="uH1-wO-7T4" id="qMi-g5-3Ns"/>
                         <outlet property="passwordTF" destination="5mc-De-Nbf" id="Qzp-1e-RJp"/>
                     </connections>
                 </viewController>
