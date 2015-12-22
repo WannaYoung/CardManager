@@ -19,6 +19,8 @@ class LoginViewController: UIViewController
     {
         super.viewDidLoad()
         
+        self.title = "用户名登录"
+        
 
     }
 
@@ -29,14 +31,17 @@ class LoginViewController: UIViewController
 
     }
     
-    @IBAction func gotoRegist(sender: UIButton)
+    override func viewWillAppear(animated: Bool)
     {
-        let registVC:RegistViewController = self.storyboard?.instantiateViewControllerWithIdentifier("regist") as! RegistViewController
-        
-        self.navigationController?.pushViewController(registVC, animated: true)
-        
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBarHidden = false
     }
     
+    override func viewWillDisappear(animated: Bool)
+    {
+        super.viewWillDisappear(true)
+        self.navigationController?.navigationBarHidden = true
+    }
     
     @IBAction func clickLogin(sender: UIButton)
     {
@@ -60,17 +65,6 @@ class LoginViewController: UIViewController
         }
     }
     
-    
-    @IBAction func closeLogin(sender: UIButton)
-    {
-        self.dismissViewControllerAnimated(true) { () -> Void in
-            
-        }
-     
-    }
-    
-    
-
     
 
 }

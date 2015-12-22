@@ -35,6 +35,43 @@ class HomeViewController: UITableViewController
         
     }
 
+    @IBAction func addCard(sender: UIBarButtonItem)
+    {
+        let tumblrMenu:CHTumblrMenuView = CHTumblrMenuView()
+        
+        tumblrMenu .addMenuItemWithTitle("银行卡", andIcon: UIImage(named: "item1"))
+        { () -> Void in
+            
+        }
+        
+        tumblrMenu .addMenuItemWithTitle("账户", andIcon: UIImage(named: "item2"))
+            { () -> Void in
+                
+        }
+        tumblrMenu .addMenuItemWithTitle("会员卡", andIcon: UIImage(named: "item3"))
+            { () -> Void in
+                
+        }
+        tumblrMenu .addMenuItemWithTitle("身份证", andIcon: UIImage(named: "item4"))
+            { () -> Void in
+                
+        }
+        tumblrMenu .addMenuItemWithTitle("护照", andIcon: UIImage(named: "item5"))
+            { () -> Void in
+                
+        }
+        tumblrMenu .addMenuItemWithTitle("笔记本", andIcon: UIImage(named: "item6"))
+            { () -> Void in
+                
+        }
+        
+        tumblrMenu.show()
+    }
+    
+    
+    
+    
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int

@@ -16,14 +16,29 @@ class RegistViewController: UIViewController
     @IBOutlet weak var passwordTF: UITextField!
     
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
+        self.title = "注册"
 
     }
 
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(true)
+        self.navigationController?.navigationBarHidden = false
+    }
+    
+    override func viewWillDisappear(animated: Bool)
+    {
+        super.viewWillDisappear(true)
+        self.navigationController?.navigationBarHidden = true
     }
     
     @IBAction func gotoLogin(sender: UIButton)
