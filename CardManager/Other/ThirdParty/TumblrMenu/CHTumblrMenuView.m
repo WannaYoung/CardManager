@@ -25,13 +25,13 @@
 
 #import "CHTumblrMenuView.h"
 #define CHTumblrMenuViewTag 1999
-#define CHTumblrMenuViewImageHeight 90
-#define CHTumblrMenuViewTitleHeight 20
-#define CHTumblrMenuViewVerticalPadding 10
-#define CHTumblrMenuViewHorizontalMargin 10
+#define CHTumblrMenuViewImageHeight 60
+#define CHTumblrMenuViewTitleHeight 40
+#define CHTumblrMenuViewVerticalPadding 50
+#define CHTumblrMenuViewHorizontalMargin 50
 #define CHTumblrMenuViewRriseAnimationID @"CHTumblrMenuViewRriseAnimationID"
 #define CHTumblrMenuViewDismissAnimationID @"CHTumblrMenuViewDismissAnimationID"
-#define CHTumblrMenuViewAnimationTime 0.36
+#define CHTumblrMenuViewAnimationTime 0.30
 #define CHTumblrMenuViewAnimationInterval (CHTumblrMenuViewAnimationTime / 5)
 
 
@@ -54,7 +54,8 @@
         titleLabel_ = [UILabel new];
         titleLabel_.textAlignment = NSTextAlignmentCenter;
         titleLabel_.backgroundColor = [UIColor clearColor];
-        titleLabel_.textColor = [UIColor whiteColor];
+        titleLabel_.textColor = [UIColor darkGrayColor];
+        titleLabel_.font = [UIFont systemFontOfSize:15];
         titleLabel_.text = title;
         _selectedBlock = block;
         [self addSubview:iconView_];
@@ -163,7 +164,7 @@
 - (void)dismiss:(id)sender
 {
     [self dropAnimation];
-    double delayInSeconds = CHTumblrMenuViewAnimationTime  + CHTumblrMenuViewAnimationInterval * (buttons_.count + 1);
+    double delayInSeconds = CHTumblrMenuViewAnimationInterval * (buttons_.count + 1);
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [self removeFromSuperview];
@@ -315,6 +316,13 @@
     }
     
     self.frame = topViewController.view.bounds;
+    
+    UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight]];
+    
+    effectView.clipsToBounds = YES;
+    effectView.frame = self.frame;
+    [self insertSubview:effectView atIndex:0];
+    
     [topViewController.view addSubview:self];
     
     [self riseAnimation];

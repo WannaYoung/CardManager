@@ -64,6 +64,18 @@ class HomeViewController: UITableViewController
             { () -> Void in
                 
         }
+        tumblrMenu .addMenuItemWithTitle("提醒", andIcon: UIImage(named: "item7"))
+            { () -> Void in
+                
+        }
+        tumblrMenu .addMenuItemWithTitle("纪念日", andIcon: UIImage(named: "item8"))
+            { () -> Void in
+                
+        }
+        tumblrMenu .addMenuItemWithTitle("行程表", andIcon: UIImage(named: "item9"))
+            { () -> Void in
+                
+        }
         
         tumblrMenu.show()
     }
