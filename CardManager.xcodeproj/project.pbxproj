@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F491D281C56620C00F778A4 /* TypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F491D271C56620C00F778A4 /* TypeViewController.swift */; };
 		2F514DC31C27A4EA000040F7 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F514DC11C27A4EA000040F7 /* ChooseViewController.swift */; };
 		2F514DC81C27D93F000040F7 /* CHTumblrMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F514DC71C27D93F000040F7 /* CHTumblrMenuView.m */; };
 		2F9086D91C23DFA900ED433A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9086D61C23DFA900ED433A /* MBProgressHUD.m */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F491D271C56620C00F778A4 /* TypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TypeViewController.swift; sourceTree = "<group>"; };
 		2F514DC11C27A4EA000040F7 /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		2F514DC61C27D93F000040F7 /* CHTumblrMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTumblrMenuView.h; sourceTree = "<group>"; };
 		2F514DC71C27D93F000040F7 /* CHTumblrMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTumblrMenuView.m; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 			isa = PBXGroup;
 			children = (
 				2FEBF26F1C213C00001DB9A0 /* HomeViewController.swift */,
+				2F491D271C56620C00F778A4 /* TypeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				2F514DC31C27A4EA000040F7 /* ChooseViewController.swift in Sources */,
 				2FEBF2741C213D6B001DB9A0 /* LoginViewController.swift in Sources */,
 				2F9086DC1C23E0F800ED433A /* AppTools.swift in Sources */,
+				2F491D281C56620C00F778A4 /* TypeViewController.swift in Sources */,
 				2FEBF2531C2110D9001DB9A0 /* NSString+Tony.m in Sources */,
 				2FEBF2591C2110D9001DB9A0 /* UIImage+Scale.m in Sources */,
 				2FEBF25B1C2110D9001DB9A0 /* UIView+Shake.m in Sources */,
