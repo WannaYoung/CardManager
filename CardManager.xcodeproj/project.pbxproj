@@ -10,6 +10,7 @@
 		2F491D281C56620C00F778A4 /* TypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F491D271C56620C00F778A4 /* TypeViewController.swift */; };
 		2F514DC31C27A4EA000040F7 /* ChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F514DC11C27A4EA000040F7 /* ChooseViewController.swift */; };
 		2F514DC81C27D93F000040F7 /* CHTumblrMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F514DC71C27D93F000040F7 /* CHTumblrMenuView.m */; };
+		2F58F52B1C5B5CF40016277A /* bank.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2F58F52A1C5B5CF40016277A /* bank.plist */; };
 		2F9086D91C23DFA900ED433A /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9086D61C23DFA900ED433A /* MBProgressHUD.m */; };
 		2F9086DA1C23DFA900ED433A /* MMMaterialDesignSpinner.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9086D81C23DFA900ED433A /* MMMaterialDesignSpinner.m */; };
 		2F9086DC1C23E0F800ED433A /* AppTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9086DB1C23E0F800ED433A /* AppTools.swift */; };
@@ -63,6 +64,7 @@
 		2F514DC11C27A4EA000040F7 /* ChooseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseViewController.swift; sourceTree = "<group>"; };
 		2F514DC61C27D93F000040F7 /* CHTumblrMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTumblrMenuView.h; sourceTree = "<group>"; };
 		2F514DC71C27D93F000040F7 /* CHTumblrMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTumblrMenuView.m; sourceTree = "<group>"; };
+		2F58F52A1C5B5CF40016277A /* bank.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = bank.plist; sourceTree = "<group>"; };
 		2F9086D51C23DFA900ED433A /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		2F9086D61C23DFA900ED433A /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		2F9086D71C23DFA900ED433A /* MMMaterialDesignSpinner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMaterialDesignSpinner.h; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 		2F9CF6721C20F7FB009F7739 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2F58F52A1C5B5CF40016277A /* bank.plist */,
 				2FEBF25C1C2111CE001DB9A0 /* Info.plist */,
 				2FEBF25E1C2116A6001DB9A0 /* CardManager-Bridging-Header.h */,
 			);
@@ -501,6 +504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F58F52B1C5B5CF40016277A /* bank.plist in Resources */,
 				2F9CF64D1C20F6E5009F7739 /* LaunchScreen.storyboard in Resources */,
 				2F9CF64A1C20F6E5009F7739 /* Assets.xcassets in Resources */,
 				2F9CF6481C20F6E5009F7739 /* Main.storyboard in Resources */,
